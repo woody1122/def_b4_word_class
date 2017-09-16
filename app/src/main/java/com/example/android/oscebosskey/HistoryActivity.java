@@ -3,6 +3,7 @@ package com.example.android.oscebosskey;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -18,7 +19,7 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.record_list);
 
 
-        ArrayList<Record> records = new ArrayList<Record>();
+        final ArrayList<Record> records = new ArrayList<Record>();
 
         records.add(new Record("Chest Pain"));
         records.add(new Record("Abdominal Pain"));
@@ -33,8 +34,11 @@ public class HistoryActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent chestpainIntent = new Intent(HistoryActivity.this, ChestPain.class);
-                    startActivity(chestpainIntent); }
+                Intent intent = new Intent(getApplicationContext(), ChestPain.class);
+                        startActivity(intent);
+
+
+            }
             });
 
     }

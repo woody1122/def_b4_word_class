@@ -24,6 +24,13 @@
         <activity
             android:name=".OtherActivity"
             android:label="Other"></activity>
+        <activity
+            android:name=".ChestPain"
+            android:label="Chest Pain"></activity>
+        <activity
+            android:name=".AbdominalPain"
+            android:label="Abominal Pain"></activity>
+
     </application>
 
 </manifest>

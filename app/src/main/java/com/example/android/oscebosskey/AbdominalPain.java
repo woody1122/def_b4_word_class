@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class ChestPain extends AppCompatActivity {
+public class AbdominalPain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class ChestPain extends AppCompatActivity {
 
         records.add(new Record("Wash Hands"));
         records.add(new Record("Introduce Pain"));
-        records.add(new Record("Dance"));
+        records.add(new Record("Examine the Abdomen"));
 
         RecordAdapter adapter =
                 new RecordAdapter(this, records, R.color.colorTan);

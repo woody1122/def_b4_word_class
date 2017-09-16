@@ -7,6 +7,8 @@ public class Record {
 
     private String mListedItem;
 
+    
+
     public Record(String ListedItem){
         mListedItem = ListedItem;
     }
@@ -16,5 +18,6 @@ public class Record {
     public String getListedItem(){
         return mListedItem;
     }
+
 
 }
