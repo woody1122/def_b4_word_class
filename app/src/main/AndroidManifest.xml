@@ -20,16 +20,20 @@
             android:label="History"></activity>
         <activity
             android:name=".ExaminationActivity"
-            android:label="Examination" />
+            android:label="Examination"></activity>
         <activity
             android:name=".OtherActivity"
             android:label="Other"></activity>
+
         <activity
             android:name=".ChestPain"
             android:label="Chest Pain"></activity>
         <activity
             android:name=".AbdominalPain"
             android:label="Abominal Pain"></activity>
+        <activity
+            android:name=".Headache"
+            android:label="Headache"></activity>
 
     </application>
 

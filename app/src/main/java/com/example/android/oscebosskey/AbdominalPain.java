@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -19,16 +20,16 @@ public class AbdominalPain extends AppCompatActivity {
         setContentView(R.layout.record_list);
 
 
-        ArrayList<Record> records = new ArrayList<Record>();
+        ArrayList<String> records = new ArrayList<String>();
 
-        records.add(new Record("Wash Hands"));
-        records.add(new Record("Introduce Pain"));
-        records.add(new Record("Examine the Abdomen"));
+        records.add(new String("Wash Hands"));
+        records.add(new String("Introduce Yourself"));
+        records.add(new String("Dance Second time"));
 
-        RecordAdapter adapter =
-                new RecordAdapter(this, records, R.color.colorTan);
+        ArrayAdapter<String> itemsAdapter =
+                new ArrayAdapter<String>(this, R.layout.end_list_item, records);
         ListView listView = (ListView) findViewById(R.id.list);
-        listView.setAdapter(adapter);
+        listView.setAdapter(itemsAdapter);
 
     }
 }

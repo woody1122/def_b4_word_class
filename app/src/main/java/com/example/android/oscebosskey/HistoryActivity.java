@@ -21,9 +21,9 @@ public class HistoryActivity extends AppCompatActivity {
 
         final ArrayList<Record> records = new ArrayList<Record>();
 
-        records.add(new Record("Chest Pain"));
-        records.add(new Record("Abdominal Pain"));
-        records.add(new Record("Headache"));
+        records.add(new Record("Chest Pain", ChestPain.class));
+        records.add(new Record("Abdominal Pain", AbdominalPain.class));
+        records.add(new Record("Headache", Headache.class));
 
         RecordAdapter adapter =
                 new RecordAdapter(this, records, R.color.colorTan);
@@ -34,10 +34,9 @@ public class HistoryActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(), ChestPain.class);
-                        startActivity(intent);
-
-
+                Record record = records.get(position);
+                Intent intent = new Intent(getApplicationContext(), record.getListedItemId());
+                startActivity(intent);
             }
             });
 

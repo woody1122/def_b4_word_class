@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class ChestPain extends AppCompatActivity {
+public class Headache extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class ChestPain extends AppCompatActivity {
 
         ArrayList<String> records = new ArrayList<String>();
 
-        records.add(new String("Wash Hands"));
+        records.add(new String("Ask: Have you got a headache?"));
         records.add(new String("Introduce Yourself"));
         records.add(new String("Dance"));
 
